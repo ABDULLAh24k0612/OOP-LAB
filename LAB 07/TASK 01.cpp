@@ -76,7 +76,7 @@ class SecurityCamera:public Device{
         SecurityCamera(int id,string name,string location,double resolution,bool nightvision):
         Device(id,name,location),resolution(resolution),recordingstatus(false),nightvision(nightvision){}
 
-        void turnon(){
+        void turnon()override{
             status=true;
             recordingstatus=true;
             cout<<name<<" Starts Recording"<<endl;
